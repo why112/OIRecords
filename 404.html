@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        var isGithubPages = window.location.hostname.endsWith('github.io');
+        var segments = window.location.pathname.split('/').filter(Boolean);
+        var basePath =
+          isGithubPages && segments.length > 0 ? '/' + segments[0] + '/' : '/';
+
+        window.sessionStorage.setItem(
+          'oi-records:redirect',
+          window.location.pathname + window.location.search + window.location.hash
+        );
+        window.location.replace(basePath);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+

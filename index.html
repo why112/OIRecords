@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="用于追踪算法竞赛训练营学生作业完成情况的轻量级 Web 应用。"
+    />
+    <title>算法竞赛作业完成情况追踪系统</title>
+    <script>
+      (function () {
+        var isGithubPages = window.location.hostname.endsWith('github.io');
+        var segments = window.location.pathname.split('/').filter(Boolean);
+
+        window.__OI_RECORDS_BASE_PATH__ =
+          isGithubPages && segments.length > 0 ? '/' + segments[0] + '/' : '/';
+
+        var redirectPath = window.sessionStorage.getItem('oi-records:redirect');
+
+        if (redirectPath) {
+          window.sessionStorage.removeItem('oi-records:redirect');
+          window.history.replaceState(null, '', redirectPath);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+

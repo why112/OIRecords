@@ -1,0 +1,42 @@
+[
+  {
+    "id": "t001",
+    "title": "Codeforces Div2",
+    "type": "codeforces_div2"
+  },
+  {
+    "id": "t003",
+    "title": "洛谷",
+    "type": "luogu"
+  },
+  {
+    "id": "t007",
+    "title": "kuangbin并查集",
+    "type": "kuangbin_dsu"
+  },
+  {
+    "id": "t008",
+    "title": "Coduck",
+    "type": "coduck"
+  },
+  {
+    "id": "t009",
+    "title": "Codeforces",
+    "type": "codeforces"
+  },
+  {
+    "id": "t010",
+    "title": "GESP六级",
+    "type": "gesp_6"
+  },
+  {
+    "id": "t011",
+    "title": "GESP七级",
+    "type": "gesp_7"
+  },
+  {
+    "id": "t012",
+    "title": "GESP八级",
+    "type": "gesp_8"
+  }
+]
