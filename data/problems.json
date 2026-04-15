@@ -433,5 +433,110 @@
     "id": "p092",
     "taskId": "t012",
     "title": "子图最短路"
+  },
+  {
+    "id": "p093",
+    "taskId": "t001",
+    "title": "CF2217A The Equalizer"
+  },
+  {
+    "id": "p094",
+    "taskId": "t001",
+    "title": "CF2217B Flip the Bit (Easy Version)"
+  },
+  {
+    "id": "p095",
+    "taskId": "t001",
+    "title": "CF2217C Grid Covering"
+  },
+  {
+    "id": "p096",
+    "taskId": "t001",
+    "title": "CF2217D Flip the Bit (Hard Version)"
+  },
+  {
+    "id": "p097",
+    "taskId": "t001",
+    "title": "CF2217E Definitely Larger"
+  },
+  {
+    "id": "p098",
+    "taskId": "t013",
+    "title": "青蛙"
+  },
+  {
+    "id": "p099",
+    "taskId": "t013",
+    "title": "货物运输"
+  },
+  {
+    "id": "p100",
+    "taskId": "t013",
+    "title": "农场派对"
+  },
+  {
+    "id": "p101",
+    "taskId": "t013",
+    "title": "货币兑换"
+  },
+  {
+    "id": "p102",
+    "taskId": "t013",
+    "title": "虫洞"
+  },
+  {
+    "id": "p103",
+    "taskId": "t013",
+    "title": "传递信息"
+  },
+  {
+    "id": "p104",
+    "taskId": "t013",
+    "title": "牛的比赛"
+  },
+  {
+    "id": "p105",
+    "taskId": "t013",
+    "title": "最短路径和"
+  },
+  {
+    "id": "p106",
+    "taskId": "t013",
+    "title": "糖果"
+  },
+  {
+    "id": "p107",
+    "taskId": "t013",
+    "title": "地铁"
+  },
+  {
+    "id": "p108",
+    "taskId": "t013",
+    "title": "昂贵的聘礼"
+  },
+  {
+    "id": "p109",
+    "taskId": "t013",
+    "title": "电车"
+  },
+  {
+    "id": "p110",
+    "taskId": "t013",
+    "title": "Nya图最短路"
+  },
+  {
+    "id": "p111",
+    "taskId": "t013",
+    "title": "规划最短路"
+  },
+  {
+    "id": "p112",
+    "taskId": "t013",
+    "title": "0或1"
+  },
+  {
+    "id": "p113",
+    "taskId": "t013",
+    "title": "排队布局"
   }
 ]

@@ -38,5 +38,10 @@
     "id": "t012",
     "title": "GESP八级",
     "type": "gesp_8"
+  },
+  {
+    "id": "t013",
+    "title": "kuangbin最短路",
+    "type": "kuangbin_shortpath"
   }
 ]
