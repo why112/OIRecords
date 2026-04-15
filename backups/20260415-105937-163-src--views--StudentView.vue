@@ -11,20 +11,6 @@ import {
 } from '../lib/data';
 import { formatProgress } from '../lib/metrics';
 
-const TEXT = {
-  backHome: '\u8fd4\u56de\u9996\u9875',
-  viewStats: '\u67e5\u770b\u7edf\u8ba1\u5206\u6790',
-  totalProgress: '\u603b\u5b8c\u6210\u60c5\u51b5\uff1a',
-  notFound: '\u672a\u627e\u5230\u5b66\u751f',
-  notFoundHint: '\u8bf7\u8fd4\u56de\u9996\u9875\u786e\u8ba4\u5b66\u751f ID \u662f\u5426\u5b58\u5728\u3002',
-  loading: '\u6b63\u5728\u52a0\u8f7d\u5b66\u751f\u8be6\u60c5\uff0c\u8bf7\u7a0d\u5019\u3002',
-  loadFailed: '\u6570\u636e\u52a0\u8f7d\u5931\u8d25\uff1a',
-  missingStudent:
-    '\u8be5\u5b66\u751f\u4e0d\u5b58\u5728\uff0c\u53ef\u80fd\u662f\u94fe\u63a5\u6709\u8bef\uff0c\u6216\u6570\u636e\u6587\u4ef6\u4e2d\u5c1a\u672a\u521b\u5efa\u5bf9\u5e94\u7684\u5b66\u751f\u8bb0\u5f55\u3002',
-  noTasks:
-    '\u5f53\u524d\u8fd8\u6ca1\u6709\u4efb\u4f55\u4f5c\u4e1a\u5757\uff0c\u53ef\u4ee5\u5148\u901a\u8fc7\u672c\u5730\u811a\u672c\u8865\u5145 tasks.json \u548c problems.json\u3002'
-};
-
 const route = useRoute();
 const store = useRecordsStore();
 
@@ -50,45 +36,36 @@ const taskEntries = computed(() =>
 
 <template>
   <section class="page-head">
-    <div class="page-head__actions">
-      <RouterLink class="back-link" :to="{ name: 'home' }">{{ TEXT.backHome }}</RouterLink>
-      <RouterLink
-        v-if="student"
-        class="back-link back-link--accent"
-        :to="{ name: 'student-stats', params: { id: student.id } }"
-      >
-        {{ TEXT.viewStats }}
-      </RouterLink>
-    </div>
+    <RouterLink class="back-link" :to="{ name: 'home' }">{{ '返回首页' }}</RouterLink>
 
     <div v-if="student" class="page-head__content">
       <p class="page-head__eyebrow">Student Detail</p>
       <h1 class="page-head__title">{{ student.name }}</h1>
-      <p class="page-head__description">{{ TEXT.totalProgress }}{{ formatProgress(summary.solved, summary.total) }}</p>
+      <p class="page-head__description">{{ '总完成情况：' }}{{ formatProgress(summary.solved, summary.total) }}</p>
     </div>
 
     <div v-else class="page-head__content">
       <p class="page-head__eyebrow">Student Detail</p>
-      <h1 class="page-head__title">{{ TEXT.notFound }}</h1>
-      <p class="page-head__description">{{ TEXT.notFoundHint }}</p>
+      <h1 class="page-head__title">{{ '未找到学生' }}</h1>
+      <p class="page-head__description">{{ '请返回首页确认学生 ID 是否存在。' }}</p>
     </div>
   </section>
 
   <section v-if="store.loading && !store.loaded" class="panel">
-    {{ TEXT.loading }}
+    {{ '正在加载学生详情，请稍候。' }}
   </section>
 
   <section v-else-if="store.error" class="panel panel--danger">
-    {{ TEXT.loadFailed }}{{ store.error }}
+    {{ '数据加载失败：' }}{{ store.error }}
   </section>
 
   <section v-else-if="!student" class="panel">
-    {{ TEXT.missingStudent }}
+    {{ '该学生不存在，可能是链接有误，或数据文件中尚未创建对应的学生记录。' }}
   </section>
 
   <template v-else>
     <section v-if="taskEntries.length === 0" class="panel">
-      {{ TEXT.noTasks }}
+      {{ '当前还没有任何作业块，可以先通过本地脚本补充 tasks.json 和 problems.json。' }}
     </section>
 
     <section v-else class="task-stack task-stack--page">

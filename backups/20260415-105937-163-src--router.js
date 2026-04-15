@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from './views/HomeView.vue';
 import StudentView from './views/StudentView.vue';
-import StudentStatsView from './views/StudentStatsView.vue';
 import { getAppBasePath } from './lib/runtime';
 
 const router = createRouter({
@@ -19,12 +18,6 @@ const router = createRouter({
       props: true
     },
     {
-      path: '/student/:id/stats',
-      name: 'student-stats',
-      component: StudentStatsView,
-      props: true
-    },
-    {
       path: '/:pathMatch(.*)*',
       redirect: '/'
     }
@@ -35,3 +28,4 @@ const router = createRouter({
 });
 
 export default router;
+
